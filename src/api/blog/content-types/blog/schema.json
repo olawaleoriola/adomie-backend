@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blogs",
+  "info": {
+    "singularName": "blog",
+    "pluralName": "blogs",
+    "displayName": "blog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Investment",
+        "Start_up"
+      ]
+    },
+    "Summary": {
+      "type": "text",
+      "required": true,
+      "maxLength": 255
+    },
+    "Thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Featured_Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "content": {
+      "type": "blocks"
+    },
+    "Is_Featured": {
+      "type": "boolean"
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
